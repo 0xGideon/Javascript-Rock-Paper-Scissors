@@ -12,7 +12,7 @@ case "Paper":
 case "Scissors":
 let playerIndex = gameArr.lastIndexOf(player);
 let computer = Math.random() * 3;
-computerIndex = Math.floor(computer);
+let computerIndex = Math.floor(computer);
 console.log(`You choose: ${gameArr[playerIndex]} and Computer choose: ${gameArr[computerIndex]}`);
 if ((playerIndex === 0) && (computerIndex ===  2)) {
 console.log("You win");
@@ -24,13 +24,13 @@ else if ((playerIndex === 2) && (computerIndex === 1)) {
 console.log("You win");
 }
 else if ((playerIndex === 2) && (computerIndex === 0)) {
-console.log("You loose, Computer Win");
+console.log("You lose, Computer Wins");
 }
 else if ((playerIndex === 0) && (computerIndex === 1)) {
-console.log("You loose, Computer Wins");
+console.log("You lose, Computer Wins");
 }
 else if ((playerIndex === 1) && (computerIndex === 2)) {
-console.log("You loose, Computer Win");
+console.log("You lose, Computer Wins");
 }
 else {
 console.log("Its a tie");
@@ -39,4 +39,4 @@ break;
 
 default:
 console.log("Enter a valid input (Rock, Paper, Scissors)");
-} //end
+} //end project
