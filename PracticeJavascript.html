@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>This goes in the tab of your browser</title>
+</head>
+<body>
+<script>
+let language = "JavaScript";
+let message = `JavaScript2`;
+console.log(language, message); // Jvascript Javascript2
+console.log(language + message); // JvascriptJavascript2
+
+let sym1 = Symbol("JavaScript is fun!");
+let sym2 = Symbol("JavaScript is fun!");
+console.log("These two Symbols are the same:", sym1 === sym2);
+
+let terribleThingToDo = undefined;
+let lastName;
+console.log("Same undefined:", lastName === terribleThingToDo);
+
+let betterOption = null;
+console.log("Same null:", lastName === betterOption);
+
+let str = "Hello";
+let nr = 7;
+let bigNr = 12345678901234n;
+let bool = true;
+let sym = Symbol("unique");
+let undef = undefined;
+let unknown = null;
+
+console.log("str", typeof str);
+console.log("nr", typeof nr);
+console.log("bigNr", typeof bigNr);
+console.log("bool", typeof bool);
+console.log("sym", typeof sym);
+console.log("undef", typeof undef);
+console.log("unknown", typeof unknown);
+
+let nrToStr = 6;
+nrToStr = String(nrToStr);
+console.log(nrToStr, typeof nrToStr);
+
+let strToNr = "12";
+strToNr = Number(strToNr);
+console.log(strToNr, typeof strToNr);
+
+let strToBool = "any string will return true";
+strToBool = Boolean(strToBool);
+console.log(strToBool, typeof strToBool);
+
+let nullToNr = null;
+nullToNr = Number(nullToNr);
+console.log("null", nullToNr, typeof nullToNr); //converting null to a number returns 0
+
+let strToNr1 = "";
+strToNr1 = Number(strToNr1);
+console.log("empty string", strToNr1, typeof strToNr1); //converting empty string to number returns 0.
+
+let strToNr2 = "";
+strToNr2 = Boolean(strToNr2);
+console.log("empty string", strToNr2, typeof strToNr2); //converting empty string to boolean returns false.
+
+let strToNr3 = 0;
+strToNr3 = Boolean(strToNr3);
+console.log(strToNr3, typeof strToNr3); //Number 1 above returns true, 0 returns false.
+
+let strToNr4 = "hello";
+strToNr4 = Number(strToNr4);
+console.log(strToNr4, typeof strToNr4);
+
+let strToBoo5 = "false";
+strToBoo5 = Boolean(strToBoo5);
+console.log(strToBoo5, typeof strToBoo5); //Only an empty string, null, and undefined will lead to a Boolean value of false.
+
+let strToNr6 = true;
+strToNr6 = Number(strToNr6);
+console.log(strToNr6, typeof strToNr6); //converting bollen true to number returns 1.
+
+let strToNr7 = false;
+strToNr7 = Number(strToNr7);
+console.log(strToNr7, typeof strToNr7); //converting bollen true to number returns 1.
+
+let nr1 = 2;
+let nr2 = "2";
+console.log(nr1 + Number(nr2));
+
+let str1 = "Hello ";
+let str2 = "addition";
+let result2 = str1 + str2;
+console.log(result2);
+
+let name = "Maaike";
+let age =29;
+let trueVar = true;
+console.log(`Hello, my name is ${name}, I am ${age} years old and I can code JavaScript: ${trueVar}`)
+
+let nr4 = 2;
+console.log(nr4++);
+console.log(nr4);
+console.log(++nr4);
+console.log(nr4);
+
+let km = prompt("Enter the value of kilometers");
+let miles = (km) * (1.60934);
+console.log(`The distance of ${km} kilometers is equal to ${miles} miles`);
+
+let x = 5;
+let y = "5";
+console.log(x == y);
+console.log(x === y);
+
+let a = "Hello";
+a = prompt("world");
+console.log(a);
+
+let a1 = 5;
+let b = 70;
+let c = "5";
+b++;
+console.log(b++);
+console.log(b);
+console.log(++b);
+console.log(b++);
+
+let result = 3 + 4 * 2 / 8;
+console.log(result);
+
+let firstNum = 5;
+let secondNum = 10;
+firstNum++;
+secondNum--;
+let total = ++firstNum + secondNum;
+console.log(total);
+
+arr3 = new Array(10);
+console.log(arr3);
+
+cars = ["Toyota", "Renault", "Volkswagen"];
+console.log(cars);
+
+let practiceArray = ["Milk", "Bread", "Apples"];
+for (let i in practiceArray){
+if (practiceArray[i] === "Bread"){
+practiceArray[i] = "Bananas";
+}
+}
+console.log(practiceArray);
+let lengthOfFood = practiceArray.push("Egg");
+console.log(practiceArray);
+console.log(lengthOfFood);
+practiceArray.splice(2, 0, "Yam", "Beans");
+console.log(practiceArray);
+practiceArraypop = practiceArray.pop()
+console.log(practiceArraypop);
+console.log(practiceArray.shift());
+console.log(practiceArray);
+console.log(practiceArray.indexOf("Yam"));
+
+let arr = [0, 1, 2];
+console.log(typeof arr);
+
+let dog = { dogName: "JavaScript",
+weight: 2.4,
+color: "brown",
+breed: "chihuahua",
+age: 3,
+burglarBiter: true
+};
+console.log(typeof dog);
+console.log(dog);
+
+let company = { companyName: "Healthy Candy",
+activity: ["food manufacturing","improving kids' health", "manufacturing toys"],
+address: {
+street: "2nd street",
+number: "123",
+zipcode: "33116",
+city: "Miami",
+state: "Florida"
+},
+yearOfEstablishment: 2021
+};
+console.log(company.address.zipcode);
+console.log(company["address"]["number"]);
+console.log(company.activity[1]);
+
+const inventory = [];
+const item3 = {
+name: "computer",
+model: "imac",
+cost: 1000,
+qty: 3
+}
+const item2 = {
+name: "phone",
+model: "android",
+cost: 500,
+qty: 11
+}
+const item1 = {
+name: "tablet",
+model: "ipad",
+cost: 650,
+qty: 1
+}
+inventory.push(item1, item2, item3);
+console.log(inventory);
+console.log(inventory[2].qty);
+
+const theList = ['Laurence', 'Svekis', true, 35, null, undefined, {test: 'one', score: 55}, ['one', 'two']];
+theList.shift();
+theList.pop();
+theList.splice(0, 0, "FIRST"); //or theList.unshift("FIRST");
+theList.splice(2, 5, "MIDDLE", "hello world");
+theList.push("LAST");
+console.log(theList);
+
+const myArr3 = [3,6,8,9,3,55,553,434];
+myArr3.sort();
+console.log(myArr3); //notice the answer isnt really sorted.
+myArr3.sort((a, b) => {return (b-a)}); //(a-b) is ascending while (b-a) is descending.
+console.log(myArr3);
+myArr3.length = 0;
+console.log(myArr3[0]);
+
+let promptNumber = prompt("Enter a number");
+promptNumber = Number(promptNumber);
+let ageMessage;
+if(promptNumber >= 21){
+ageMessage = "Enter the venue and you can buy alchohol!";
+}
+else if (promptNumber >= 19)
+{
+ageMessage = "Enter the venue and you cant buy alchohol!";
+}
+else
+{
+ageMessage = "You cant enter the venue!";
+}
+console.log(ageMessage);
+
+const id = true;
+const ternaryMessage = (id) ? "Allowed In" : "Denied Entry";
+console.log(ternaryMessage);
+
+let randomVariable;
+randomVariable = Math.random() * 6;
+randomVariable = Math.floor(randomVariable);
+console.log(randomVariable);
+let questionAsked = prompt("Ask me anything");
+let consoleMessage;
+switch (randomVariable) {
+case 0:
+consoleMessage = "I really dont know!";
+break;
+case 1:
+consoleMessage = "Please ask google";
+break;
+case 2:
+consoleMessage = "AI can help you better";
+break;
+case 3:
+consoleMessage = "Ask a friend who can answer the question";
+break;
+case 4:
+consoleMessage = "Chat GPT and Meta AI are good tools to answer question";
+break;
+case 5:
+consoleMessage = "I think I can answer your question";
+break;
+default:
+consoleMessage = "You should know the answer!";
+break;
+}
+console.log(`Your question is: ${questionAsked} and my response: is ${consoleMessage}`);
+
+
+let grade = prompt("Enter a grade");
+switch(grade){
+case "F":
+case "D":
+console.log("You've failed!");
+break;
+case "C":
+case "B":
+console.log("You've passed!");
+break;
+case "A":
+console.log("Nice!");
+break;
+default:
+console.log("I don't know this grade.");
+}
+
+
+//Rock Paper and Scissors game.
+//0 beats 2
+//1 beats 0
+//2 beats 1
+
+const gameArr = ["Rock", "Paper", "Scissors"];
+let player = prompt("Enter Rock, Paper, Scissors");
+
+switch(player) {
+case "Rock":
+case "Paper":
+case "Scissors":
+let playerIndex = gameArr.lastIndexOf(player);
+let computer = Math.random() * 3;
+computerIndex = Math.floor(computer);
+console.log(`You choose: ${gameArr[playerIndex]} and Computer choose: ${gameArr[computerIndex]}`);
+if ((playerIndex === 0) && (computerIndex ===  2)) {
+console.log("You win");
+}
+else if ((playerIndex === 1) && (computerIndex === 0)) {
+console.log("You win");
+}
+else if ((playerIndex === 2) && (computerIndex === 1)) {
+console.log("You win");
+}
+else if ((playerIndex === 2) && (computerIndex === 0)) {
+console.log("You loose, Computer Win");
+}
+else if ((playerIndex === 0) && (computerIndex === 1)) {
+console.log("You loose, Computer Wins");
+}
+else if ((playerIndex === 1) && (computerIndex === 2)) {
+console.log("You loose, Computer Win");
+}
+else {
+console.log("Its a tie");
+}
+break;
+
+default:
+console.log("Enter a valid input (Rock, Paper, Scissors)");
+} //end
+
+let i = 0;
+while (i < 10) {
+console.log(i);
+i++;
+}
+
+let nr5 = 0;
+let nr6 = 1;
+let temp;
+const fibonacciArray = [];
+while (fibonacciArray.length < 25) {
+fibonacciArray.push(nr5);
+temp = nr5 + nr6;
+nr5 = nr6;
+nr6 = temp;
+}
+console.log(fibonacciArray);
+
+let counter = 0;
+let step = 2;
+do {
+console.log(counter); //prints 1 - 100;
+counter += step;
+}
+while(counter <= 100);
+
+let arrOfArrays = [];
+for (let i = 0; i < 3; i++){
+arrOfArrays.push([]);
+for (let j = 0; j < 7; j++) {
+arrOfArrays[i].push(j);
+}
+}
+console.table(arrOfArrays);
+
+</script>
+</body>
+</html>
